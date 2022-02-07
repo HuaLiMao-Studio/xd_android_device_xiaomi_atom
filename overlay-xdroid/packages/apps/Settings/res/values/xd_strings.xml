@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+     Copyright (C) 2022 The xdroid-oss Project
+
+     SPDX-License-Identifier: Apache-2.0
+
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- xd. About Phone -->
+    <string name="xd_device_name_summary">Redmi 10x 5G</string>
+    <string name="xd_chipset_type_summary">Mediatek MT6875 Dimensity 820 (7nm)</string>
+    <string name="xd_gpu_summary">Mali-G57 MC5</string>
+    <string name="xd_camera_mp_summary">48MP+8MP+2MP Triple Camera</string>
+    <string name="xd_screen_type_summary">AMOLED FHD+ 6.3 Screen</string>
+
+</resources>

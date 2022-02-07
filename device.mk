@@ -15,12 +15,10 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-xdroid
 
-# Overlay-remove
-PRODUCT_PACKAGES += \
-    FrameworksResOverlay \
-    FrameworksResOverlayExt
+# RRO configuration
+PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 31

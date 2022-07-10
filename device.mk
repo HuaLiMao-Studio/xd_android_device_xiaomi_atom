@@ -35,7 +35,6 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/xiaomi
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -54,7 +53,7 @@ PRODUCT_COPY_FILES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.xiaomi
+    android.hardware.biometrics.fingerprint@2.3-service.xiaomi_mt6873
 
 # HIDL 
 PRODUCT_PACKAGES += \

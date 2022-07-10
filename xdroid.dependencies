@@ -3,12 +3,6 @@
     "repository": "android_kernel_xiaomi_mt6873",
     "target_path": "kernel/xiaomi/mt6873"
   }
-  {
-    "repository": "hardware_xiaomi"
-    "target_path": "hardware/xiaomi"
-  }
 ]
 // Repo Kernel Source
 //git clone https://github.com/HuaLiMao-Studio/android_kernel_xiaomi_mt6873.git kernel/xiaomi/mt6873 --depth=1
-// Repo hardware xiaomi
-//rm hardware/xiaomi -rf && git clone https://github.com/PixelExperience/hardware_xiaomi.git hardware/xiaomi --depth=1

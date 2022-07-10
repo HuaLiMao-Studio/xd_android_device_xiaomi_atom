@@ -5,7 +5,6 @@
 #
 
 DEVICE_PATH := device/xiaomi/atom
-BOARD_VENDOR := xiaomi
 
 # Architecture
 TARGET_ARCH := arm64
@@ -34,6 +33,10 @@ TARGET_BOOTLOADER_BOARD_NAME := mt6873
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
+# Broken Rules
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
@@ -57,7 +60,7 @@ endif
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # Fingerprint
-TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/xiaomi:libudfps_extension.xiaomi
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.xiaomi_mt6873
 TARGET_USES_FOD_ZPOS := true
 
 # Kernel

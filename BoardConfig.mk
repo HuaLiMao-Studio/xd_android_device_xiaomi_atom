@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/xiaomi/atom
+BOARD_VENDOR := xiaomi
 
 # Architecture
 TARGET_ARCH := arm64
@@ -56,7 +57,7 @@ endif
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # Fingerprint
-TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.xiaomi_mt6873
+TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/xiaomi:libudfps_extension.xiaomi
 TARGET_USES_FOD_ZPOS := true
 
 # Kernel

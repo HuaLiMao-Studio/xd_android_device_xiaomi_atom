@@ -13,10 +13,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 29
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-xdroid
-
 # RRO configuration
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -29,6 +25,7 @@ PRODUCT_PACKAGES += \
    CarrierConfigOverlayAtom \
    FrameworksResOverlayAtom \
    SettingsOverlayAtom \
+   SettingsOverlayXdroid \
    SystemUIOverlayAtom \
    TelephonyOverlayAtom
 

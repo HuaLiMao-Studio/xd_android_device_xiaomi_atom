@@ -3,6 +3,12 @@
     "repository": "android_kernel_xiaomi_mt6873",
     "target_path": "kernel/xiaomi/mt6873"
   }
+  {
+   "repository"  : "device_mediatek_sepolicy_vndr",
+   "target_path" : "device/mediatek/sepolicy_vndr",
+ },
 ]
 // Repo Kernel Source
 //git clone https://github.com/HuaLiMao-Studio/android_kernel_xiaomi_mt6873.git kernel/xiaomi/mt6873 --depth=1
+// Repo Mediatek SEPolicy
+//git clone https://github.com/PixelExperience/device_mediatek_sepolicy_vndr device/mediatek/sepolicy_vndr --depth=1

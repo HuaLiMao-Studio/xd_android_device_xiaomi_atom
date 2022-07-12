@@ -65,7 +65,8 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-	fstab.mt6873
+	fstab.mt6873 \
+        init.mt6873.rc
 
 # RcsService
 PRODUCT_PACKAGES += \

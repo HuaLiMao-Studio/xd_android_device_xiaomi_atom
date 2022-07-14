@@ -219,6 +219,7 @@ PRODUCT_PACKAGES += \
     init.mt6873.usb.rc \
     init.project.rc \
     init.sensor_2_0.rc \
+    init.logcat.rc \
     ueventd.mt6873.rc \
     partition_permission.sh \
     throttle.sh

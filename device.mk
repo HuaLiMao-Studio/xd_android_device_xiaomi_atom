@@ -139,6 +139,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0.vendor
 
+# GPS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.1.vendor \
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
@@ -149,6 +153,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0 \
+    android.hidl.memory.block@1.0.vendor \
     libhidltransport.vendor \
     libhwbinder.vendor \
     libunwindstack.vendor
@@ -218,6 +223,11 @@ PRODUCT_PACKAGES += \
     partition_permission.sh \
     throttle.sh
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-V1-ndk_platform.vendor \
+    android.hardware.power@1.0 \
+
 # Radio
 PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.2.vendor
@@ -238,11 +248,18 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
     libprotobuf-cpp-lite-vendorcompat
 
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0.vendor \
+    android.hardware.usb@1.1.vendor \
+    android.hardware.usb.gadget@1.0.vendor \
+    android.hardware.usb.gadget@1.1.vendor
+
 # Sensors
 PRODUCT_PACKAGES += \
     libsensorndkbridge \
     android.frameworks.sensorservice@1.0 \
-    android.hardware.sensors@2.0
+    android.hardware.sensors@2.0.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
@@ -269,7 +286,10 @@ PRODUCT_COPY_FILES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-V1-ndk_platform.vendor
+    android.hardware.vibrator-V1-ndk_platform.vendor \
+    android.hardware.vibrator@1.0 \
+    android.hardware.vibrator@1.1 \
+    android.hardware.vibrator@1.2
 
 # WiFi
 PRODUCT_PACKAGES += \

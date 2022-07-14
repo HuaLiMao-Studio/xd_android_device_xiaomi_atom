@@ -61,6 +61,10 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        # Load beanpod shim
+        vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod)
+            patchelf --add-needed libshim_beanpod.so ${2}
+            ;;
         # Load audio shim
         vendor/lib/hw/audio.primary.mt6873.so)
             patchelf --add-needed libshim_audio.so ${2}

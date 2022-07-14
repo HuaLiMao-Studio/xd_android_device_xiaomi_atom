@@ -164,6 +164,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 
 # VNDK
 PRODUCT_VENDOR_MOVE_ENABLED := true
+BOARD_VNDK_VERSION := current
 
 # Inherit from the proprietary version
 include vendor/xiaomi/atom/BoardConfigVendor.mk

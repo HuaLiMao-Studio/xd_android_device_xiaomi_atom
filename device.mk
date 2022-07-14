@@ -17,7 +17,7 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # VNDK
-PRODUCT_TARGET_VNDK_VERSION := 31
+PRODUCT_TARGET_VNDK_VERSION := 30
 PRODUCT_EXTRA_VNDK_VERSIONS := 30 31
 
 # Runtime Overlays
@@ -170,6 +170,16 @@ PRODUCT_PACKAGES += \
     libkeymaster_messages.vendor:64 \
     libsoft_attestation_cert.vendor:64 \
     libpuresoftkeymasterdevice.vendor:64 \
+    android.hardware.keymaster@4.0-impl \
+    android.hardware.keymaster@4.0-service \
+    android.hardware.keymaster@4.0.vendor
+
+# Beanpod Shim
+PRODUCT_PACKAGES += libshim_beanpod
+
+# Keystore
+PRODUCT_PACKAGES += \
+    android.system.keystore2
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -231,7 +241,8 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     libsensorndkbridge \
-    android.frameworks.sensorservice@1.0
+    android.frameworks.sensorservice@1.0 \
+    android.hardware.sensors@2.0
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf

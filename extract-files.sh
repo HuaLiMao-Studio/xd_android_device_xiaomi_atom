@@ -59,23 +59,6 @@ if [ -z "${SRC}" ]; then
     SRC=adb
 fi
 
-function blob_fixup() {
-    case "${1}" in
-        # Load beanpod shim
-        vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod)
-            patchelf --add-needed libshim_beanpod.so ${2}
-            ;;
-        # Load audio shim
-        vendor/lib/hw/audio.primary.mt6873.so)
-            patchelf --add-needed libshim_audio.so ${2}
-            ;;
-        # Load VNDK-30 version of libutils
-        vendor/lib64/libmtkcam_stdutils.so)
-            patchelf --replace-needed libutils.so libutils-v30.so ${2}
-            ;;
-    esac
-}
-
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${AOSP_ROOT}" false "${CLEAN_VENDOR}"
 

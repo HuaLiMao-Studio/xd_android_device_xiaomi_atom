@@ -1,45 +1,43 @@
 //
-// Copyright (C) 2017 The Android Open Source Project
-//               2022 The LineageOS Project
+// Copyright (C) 2019 The LineageOS Project
 //
-// SPDX-License-Identifier: Apache-2.0
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
 //
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
 cc_binary {
     name: "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_mt6873",
-    defaults: ["hidl_defaults"],
-    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_mt6873.rc"],
-    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_mt6873.xml"],
-//    vendor: true,
     relative_install_path: "hw",
+    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_mt6873.xml"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_mt6873.rc"],
+    defaults: ["hidl_defaults"],
     srcs: [
-        "BiometricsFingerprint.cpp",
-        "UdfpsHandler.cpp",
         "service.cpp",
+        "BiometricsFingerprint.cpp",
     ],
-
     shared_libs: [
         "libbase",
-        "libcutils",
-        "libdl",
-        "liblog",
-        "libhidlbase",
         "libhardware",
+        "libhardware_legacy",
+        "libhidlbase",
+        "liblog",
         "libutils",
         "android.hardware.biometrics.fingerprint@2.1",
         "android.hardware.biometrics.fingerprint@2.2",
         "android.hardware.biometrics.fingerprint@2.3",
+        "vendor.goodix.hardware.biometrics.fingerprint@2.1",
+        "vendor.xiaomi.hardware.fingerprintextension@1.0",
+        "vendor.xiaomi.hardware.touchfeature@1.0",
+        "vendor.xiaomi.hardware.displayfeature@1.0",
     ],
-
-    header_libs: ["xiaomifingerprint_headers"],
-}
-
-cc_library_headers {
-    name: "xiaomifingerprint_headers",
-    export_include_dirs: ["include"],
-//    vendor: true,
-    header_libs: ["libhardware_headers"],
-    export_header_lib_headers: ["libhardware_headers"],
 }
 
 cc_library_static {

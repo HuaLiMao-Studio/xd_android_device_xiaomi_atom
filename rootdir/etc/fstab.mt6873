@@ -69,11 +69,6 @@ product                                                 /product                
 /dev/block/by-name/gz1                                  /gz1                    emmc    defaults                                                             defaults
 /dev/block/by-name/gz2                                  /gz2                    emmc    defaults                                                             defaults
 
-# Vbmeta partition
-/dev/block/by-name/vbmeta                               /vbmeta                 emmc    defaults                                                            defaults
-/dev/block/by-name/vbmeta_vendor                        /vbmeta_vendor          emmc    defaults                                                            first_stage_mount,nofail
-/dev/block/by-name/vbmeta_system                        /vbmeta_system          emmc    defaults                                                            first_stage_mount,nofail,,avb=vbmeta
-
 # Other partitions
 /dev/block/by-name/proinfo                              /proinfo                emmc    defaults                                                            defaults
 /dev/block/by-name/lk                                   /bootloader             emmc    defaults                                                            defaults
@@ -85,6 +80,3 @@ product                                                 /product                
 /dev/block/by-name/logo                                 /logo                   emmc    defaults                                                            defaults
 /dev/block/by-name/expdb                                /expdb                  emmc    defaults                                                            defaults
 /dev/block/by-name/seccfg                               /seccfg                 emmc    defaults                                                            defaults
-
-# ZRAM - Compressed RAM based Block Device (SWAP)
-/dev/block/zram0                                         none        swap   defaults    zramsize=2147483648,max_comp_streams=8,zram_backingdev_size=512M
